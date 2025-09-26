@@ -4,7 +4,7 @@ interface PlayerXProps {
 }
 
 export const PlayerX = ({
-  className = 'fill-primary-2 h-8 w-8',
+  className = 'fill-primary-2 size-12',
 }: PlayerXProps) => {
   return (
     <svg
@@ -69,7 +69,7 @@ interface PlayerOProps {
 }
 
 export const PlayerO = ({
-  className = 'fill-primary-1 size-10',
+  className = 'fill-primary-1 size-14',
 }: PlayerOProps) => {
   return (
     <svg

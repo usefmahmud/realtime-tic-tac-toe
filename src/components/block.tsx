@@ -9,7 +9,7 @@ interface BlockProps {
 const Block = ({ value, onClick }: BlockProps) => {
   return (
     <div
-      className='pointer-none bg-background-2 flex size-17 cursor-pointer items-center justify-center rounded-lg shadow-[0_7px_0px_var(--color-background-3)] select-none'
+      className='pointer-none bg-background-2 flex size-26 cursor-pointer items-center justify-center rounded-lg shadow-[0_10px_0px_var(--color-background-3)] select-none'
       onClick={onClick}
     >
       {value === 'X' ? <PlayerX /> : value === 'O' ? <PlayerO /> : null}

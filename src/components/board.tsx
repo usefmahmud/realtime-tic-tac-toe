@@ -45,7 +45,7 @@ const Board = () => {
     return null;
   };
   return (
-    <div className='grid w-fit grid-cols-3 gap-5'>
+    <div className='grid w-fit grid-cols-3 gap-6'>
       {Array.from({ length: 9 }).map((_, index) => (
         <Block
           key={index}
