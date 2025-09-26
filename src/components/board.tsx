@@ -18,6 +18,8 @@ const Board = () => {
     if (winner) {
       setTimeout(() => {
         alert(`${winner} wins!`);
+        setBoard(Array(9).fill(null));
+        setTurn((prev) => (prev === 'X' ? 'O' : 'X'));
       }, 100);
     }
   };
@@ -43,7 +45,7 @@ const Board = () => {
     return null;
   };
   return (
-    <div className='grid w-fit grid-cols-3 border-2'>
+    <div className='grid w-fit grid-cols-3 gap-5'>
       {Array.from({ length: 9 }).map((_, index) => (
         <Block
           key={index}

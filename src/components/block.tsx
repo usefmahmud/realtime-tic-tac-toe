@@ -1,4 +1,5 @@
 import type { Turn } from '@/types';
+import { PlayerX, PlayerO } from './players';
 
 interface BlockProps {
   value: Turn;
@@ -8,20 +9,12 @@ interface BlockProps {
 const Block = ({ value, onClick }: BlockProps) => {
   return (
     <div
-      className='pointer-none: flex size-20 items-center justify-center border-2 select-none'
+      className='pointer-none bg-background-2 flex size-17 cursor-pointer items-center justify-center rounded-lg shadow-[0_7px_0px_var(--color-background-3)] select-none'
       onClick={onClick}
     >
-      {value === 'X' ? <X /> : value === 'O' ? <O /> : null}
+      {value === 'X' ? <PlayerX /> : value === 'O' ? <PlayerO /> : null}
     </div>
   );
 };
 
 export default Block;
-
-const X = () => {
-  return <span className='text-6xl font-bold text-red-700'>x</span>;
-};
-
-const O = () => {
-  return <span className='text-6xl font-bold text-blue-700'>o</span>;
-};
