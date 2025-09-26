@@ -1,6 +1,11 @@
+import Board from './components/board';
+
 function App() {
-  return <div className='rounded-md bg-red-500 text-red-50'>Hello World</div>;
+  return (
+    <div className='flex h-screen items-center justify-center p-20'>
+      <Board />
+    </div>
+  );
 }
 
 export default App;
-
